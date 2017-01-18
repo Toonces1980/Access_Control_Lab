@@ -12,8 +12,15 @@ public class Bank {
     Set<String>  accountNumber = new HashSet<>();
     LinkedHashMap<String, String> accountTranscationHistory = new LinkedHashMap<>();
 
-  public void recordTransaction(){
-      accountTranscationHistory.put()
+//  public void recordTransaction(){
+//      accountTranscationHistory.put()
+//  }
+//
+  public void transferFunds(BankAccount transferFrom, double fundAmount, BankAccount transferTo){
+      if (transferFrom.getAccountHolderName().equals(transferTo.getAccountHolderName())) {
+          transferFrom.makeWithdrawel(fundAmount);
+          transferTo.makeDeposit(fundAmount);
+      }
   }
 
 }
